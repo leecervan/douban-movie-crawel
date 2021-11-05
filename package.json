@@ -1,0 +1,28 @@
+{
+  "name": "douban-movie-crawel-and-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon --config nodemon.json src/server.ts"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1",
+    "lodash.clonedeep": "^4.5.0",
+    "mongodb": "^4.1.3",
+    "mongoose": "5"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.4",
+    "@types/koa-router": "^7.4.4",
+    "@types/node": "^16.11.6",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
