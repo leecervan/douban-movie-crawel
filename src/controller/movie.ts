@@ -1,8 +1,9 @@
 import { ParameterizedContext } from 'koa'
-import { Movie, MovieDocument } from '../model/movie'
+import { Movie } from '../model/movie'
 import { cCelebrities } from '../crawel/celebrities'
 import { cMovie } from '../crawel/movie'
 import { cRank } from '../crawel/rank'
+import { cTop250 } from '../crawel/top250'
 
 export const getMovie = async (ctx: ParameterizedContext): Promise<void> => {
   const { id } = ctx.params
@@ -36,6 +37,10 @@ export const getCelebrities = async (ctx: ParameterizedContext): Promise<void> =
  * 获取电影排行榜页面的边栏信息
  * @GET /movie/rank
  */
- export const getSidebarRank = async (ctx: ParameterizedContext): Promise<void> => {
+export const getSidebarRank = async (ctx: ParameterizedContext): Promise<void> => {
   ctx.body = await cRank()
+}
+
+export const getTop250 = async(ctx: ParameterizedContext): Promise<void> => {
+  ctx.body = await cTop250()
 }

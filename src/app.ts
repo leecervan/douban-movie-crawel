@@ -41,7 +41,7 @@ router.get('/', homeController.getHomeMovie);
 router.get('/movie/rank', movieController.getSidebarRank)
       .get('/movie/subject/:id', movieController.getMovie)
       .get('/movie/subject/:id/celebrities', movieController.getCelebrities)
-
+      .get('/movie/top250', movieController.getTop250)
 
 app.use(router.routes());
 app.use(router.allowedMethods());
